@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>안산고등학교 급식정보</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍽️ 안산고등학교 급식정보</h1>
+        </header>
+        
+        <main>
+            <div class="search-section">
+                <label for="meal-date">날짜 선택:</label>
+                <input type="date" id="meal-date" />
+                <button id="search-btn">급식 정보 조회</button>
+            </div>
+            
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>급식 정보를 가져오는 중...</p>
+            </div>
+            
+            <div class="meal-info" id="meal-info">
+                <h2 id="meal-date-title"></h2>
+                <div class="meal-content">
+                    <div class="meal-section">
+                        <h3>🌅 조식</h3>
+                        <div id="breakfast" class="meal-menu">정보 없음</div>
+                    </div>
+                    <div class="meal-section">
+                        <h3>🍚 중식</h3>
+                        <div id="lunch" class="meal-menu">정보 없음</div>
+                    </div>
+                    <div class="meal-section">
+                        <h3>🌙 석식</h3>
+                        <div id="dinner" class="meal-menu">정보 없음</div>
+                    </div>
+                </div>
+                
+                <div class="nutrition-info" id="nutrition-info">
+                    <h3>📊 영양 정보</h3>
+                    <div class="nutrition-content">
+                        <div class="nutrition-item">
+                            <span class="nutrition-label">탄수화물</span>
+                            <span id="carb-info" class="nutrition-value">-</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-label">단백질</span>
+                            <span id="protein-info" class="nutrition-value">-</span>
+                        </div>
+                        <div class="nutrition-item">
+                            <span class="nutrition-label">지방</span>
+                            <span id="fat-info" class="nutrition-value">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="error-message" id="error-message" style="display: none;">
+                <p>급식 정보를 가져올 수 없습니다. 다른 날짜를 시도해보세요.</p>
+            </div>
+        </main>
+        
+        <footer>
+            <p>데이터 출처: 나이스 교육정보 개방포털</p>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
